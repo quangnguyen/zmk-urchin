@@ -1,0 +1,7 @@
+/*
+ * Copyright (c) 2024 Quang Nguyen
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "../../../goku.keymap"

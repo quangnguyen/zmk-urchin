@@ -1,17 +1,17 @@
-# Copyright (c) 2022 Duccio Breschi
+# Copyright (c) 2024 Quang Nguyen
 # SPDX-License-Identifier: MIT
 
-if SHIELD_URCHIN_LEFT
+if SHIELD_GOKU_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "urchin"
+    default "goku"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_URCHIN_LEFT || SHIELD_URCHIN_RIGHT
+if SHIELD_GOKU_LEFT || SHIELD_GOKU_RIGHT
 config ZMK_SPLIT
     default y
 endif
