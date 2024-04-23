@@ -40,14 +40,7 @@
 	};
 
 	macros {
-		// sometimes my device thinks a modifier is being held down
-		// pressing all modifiers fixes it.
-		unstick: unstick {
-			label = "ZM_unstick";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
-		};
+
 	};
 
     /*           34 Keys
@@ -158,13 +151,21 @@
 	keymap {
 		compatible = "zmk,keymap";
 
+ /*           34 Keys
+    ╭──────────────╮ ╭──────────────╮
+    │ q  w  f  p  b│ │ j  l  u  y  ;│
+    │ a  r  s  t  g│ │ m  n  e  i  o│
+    │ z  x  c  d  v│ │ k  h  ,  .  /│
+    ╰────────╮ +  +│ │ +  +╭────────╯
+             ╰─────╯ ╰─────╯       */
+
         base {
             label = "BASE";
             bindings = <
                 &kp Q		&kp W		&kp F		&kp P		&kp B						&kp J		&kp L		&kp U		&kp Y		&kp SEMI
                 &kp A		&kp R		&kp S		&kp T		&kp G						&kp M		&kp N		&kp E		&kp I		&kp O
                 &kp Z		&kp X		&kp C		&kp D		&kp V						&kp K		&kp H		&kp COMMA	&kp DOT		&kp SLASH
-                                                    &mo NAV     &kp SPACE				    &kp RET		&mo SYM
+                                                    &mo NAV     &kp SPACE				    &kp RET		&lt SYM BSPC
                 >;
         };
 
