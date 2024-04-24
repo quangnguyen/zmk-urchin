@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2022 Duccio Breschi
+ * Copyright (c) 2024 Quang Nguyen
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "urchin.dtsi"
+#include "goku.dtsi"
 
 &kscan0 {
     diode-direction = "col2row";
