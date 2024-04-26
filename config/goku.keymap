@@ -36,6 +36,16 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+
+		pht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
 	};
 
 	macros {
@@ -161,10 +171,10 @@
         base {
             display-name = "BASE";
             bindings = <
-                &kp Q		    &kp W		    &kp F		    &kp P		    &kp B						&kp J		&kp L		    &kp U		    &kp Y		    &kp SEMI
-                &mt LSHFT A		&mt LCTRL R		&mt LALT S		&mt LCMD T		&kp G						&kp M		&mt LCMD N		&mt LALT E		&mt LCTRL I		&mt LSHFT O
-                &kp Z		    &kp X		    &kp C		    &kp D		    &kp V						&kp K		&kp H		    &kp COMMA	    &kp DOT		    &kp SLASH
-                                                                &lt NAV TAB     &kp SPACE				    &kp RET		&lt SYM BSPC
+                &kp Q		        &kp W		        &kp F		    &kp P		    &kp B						&kp J		&kp L		    &kp U		    &kp Y		        &kp SEMI
+                &pht LSHFT A		&pht LCTRL R		&pht LALT S		&pht LCMD T		&kp G						&kp M		&pht LCMD N		&pht LALT E		&pht LCTRL I		&pht LSHFT O
+                &kp Z		        &kp X		        &kp C		    &kp D		    &kp V						&kp K		&kp H		    &kp COMMA	    &kp DOT		        &kp SLASH
+                                                                        &lt NAV TAB     &kp SPACE				    &kp RET		&lt SYM BSPC
                 >;
         };
 
